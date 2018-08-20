@@ -1,4 +1,4 @@
-export class Module {
+class Module {
     constructor({ checkout, bus, store, api, notify }) {
         this.checkout = checkout;
         this.notify = notify;
@@ -32,3 +32,5 @@ export class Module {
         }
     }
 }
+
+export default Module;
