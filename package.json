@@ -1,0 +1,14 @@
+{
+    "name": "xolabot-sdk",
+    "version": "1.0.0",
+    "description": "XolaBot SDK",
+    "main": "build/main.js",
+    "author": "Nemanja K. <nemanja.k@xola.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "xolabot-scripts build"
+    },
+    "devDependencies": {
+        "xolabot-scripts": "^1.0.1"
+    }
+}

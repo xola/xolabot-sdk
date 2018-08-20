@@ -1,0 +1,8 @@
+# Directories
+node_modules/
+.vscode/
+build/
+src/
+
+# Files
+.prettierrc
