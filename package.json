@@ -6,7 +6,8 @@
     "author": "Nemanja K. <nemanja.k@xola.com>",
     "license": "MIT",
     "scripts": {
-        "build": "xolabot-scripts build"
+        "build": "xolabot-scripts build",
+        "prepare": "xolabot-scripts build"
     },
     "devDependencies": {
         "xolabot-scripts": "^1.0.1"

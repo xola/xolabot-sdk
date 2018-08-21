@@ -1,22 +1,10 @@
 class Module {
-    constructor({ checkout, bus, store, api, notify }) {
+    constructor({ checkout, bus, api, notify }) {
         this.checkout = checkout;
         this.notify = notify;
-        this.store = store;
         this.bus = bus;
         this.api = api;
-    }
-
-    register(name, listeners) {
-        this.name = name;
-
-        for (let event in listeners) {
-            this.bus.on(event, listeners[event]);
-        }
-    }
-
-    initialize() {
-        throw new Error('All modules must implement "initialize" method!');
+        this.window = window;
     }
 
     sleep(milliseconds) {
