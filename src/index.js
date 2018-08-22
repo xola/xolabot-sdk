@@ -16,7 +16,7 @@ class Module {
         if (window[hashedLoadXolabotModuleName]) {
             window[hashedLoadXolabotModuleName](this);
         } else {
-            console.warning('You are trying to load XolaBot module, but Xolabot has not been initialized yet...');
+            console.warn('You are trying to load XolaBot module, but Xolabot has not been initialized yet...');
         }
     }
 }
