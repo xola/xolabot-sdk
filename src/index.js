@@ -1,10 +1,6 @@
 class Module {
-    constructor({ checkout, bus, api, notify }) {
-        this.checkout = checkout;
-        this.notify = notify;
-        this.bus = bus;
-        this.api = api;
-        this.window = window;
+    constructor(options) {
+        Object.assign(this, options);
     }
 
     sleep(milliseconds) {
