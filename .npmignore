@@ -1,8 +1,7 @@
 # Directories
-node_modules/
 .vscode/
-build/
 src/
 
 # Files
+webpack.config.js
 .prettierrc
