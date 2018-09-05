@@ -1,7 +1,7 @@
 class Module {
     /**
      * Create a new module instance.
-     * @param {Object} options
+     * @param {Object} options Object with properties provided by Xolabot Dispatcher.
      */
     constructor(options) {
         Object.assign(this, options);
@@ -9,7 +9,7 @@ class Module {
     }
 
     /**
-     * Get unique key for storing state in local storage.
+     * Get unique key for storing module state in local storage.
      * @private
      */
     getLocalStorageKey() {
@@ -21,7 +21,7 @@ class Module {
     }
 
     /**
-     * Save state to local storage.
+     * Save module state to local storage.
      * @param {any} state
      */
     setState(state) {
@@ -35,7 +35,7 @@ class Module {
     }
 
     /**
-     * Load state from local storage.
+     * Load module state from local storage.
      * @private
      * @returns {any}
      */
@@ -46,6 +46,7 @@ class Module {
                 return JSON.parse(rawState);
             }
         } catch (e) {
+            this.clearState();
             console.warn('Failed loading module state from local storage!');
         }
 
@@ -72,7 +73,7 @@ class Module {
     }
 
     /**
-     * Load a module in Xolabot.
+     * Load a module in Xolabot Dispatcher.
      */
     static load() {
         const hashedLoadXolabotModuleName = btoa('loadXolabotModule');
