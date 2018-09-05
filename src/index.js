@@ -1,10 +1,22 @@
 class Module {
     /**
      * Create a new module instance.
+     * @param {string} name    Module name.
      * @param {Object} options Object with properties provided by Xolabot Dispatcher.
      */
-    constructor(options) {
+    constructor(name, options) {
+        if (!name) {
+            throw new Error('Module name is not defined!');
+        }
+
+        // Set the name as instance property.
+        // We will also use the same name for the channel.
+        this.name = this.channel = name;
+
+        // Assign all options provided by Xolabot Dispatcher to the module instance.
         Object.assign(this, options);
+
+        // Load state from local storage.
         this.state = this.getState();
     }
 
@@ -13,10 +25,6 @@ class Module {
      * @private
      */
     getLocalStorageKey() {
-        if (!this.name) {
-            throw new Error('Module name is not defined!');
-        }
-
         return `xb_module.${this.name}`;
     }
 
