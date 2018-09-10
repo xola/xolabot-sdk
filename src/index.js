@@ -33,7 +33,7 @@ class Module {
      * @param {any} state
      */
     setState(state) {
-        this.state = state;
+        this.state = { ...state };
 
         try {
             localStorage.setItem(this.getLocalStorageKey(), JSON.stringify(this.state));
@@ -94,3 +94,7 @@ class Module {
 }
 
 export default Module;
+
+const { React, Button, Columns, ProductTile, Text } = window[btoa('availableXolabotModulePackages')];
+
+export { React, Button, Columns, ProductTile, Text };
