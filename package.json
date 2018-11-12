@@ -1,6 +1,6 @@
 {
     "name": "xolabot-sdk",
-    "version": "1.0.7",
+    "version": "1.1.0",
     "description": "XolaBot SDK",
     "main": "build/main.js",
     "author": "Nemanja K. <nemanja.k@xola.com>",
