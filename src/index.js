@@ -33,7 +33,7 @@ class Module {
      * @param {any} state
      */
     setState(state) {
-        this.state = { ...state };
+        this.state = { ...this.state, ...state };
 
         try {
             localStorage.setItem(this.getLocalStorageKey(), JSON.stringify(this.state));
