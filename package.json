@@ -18,9 +18,11 @@
     },
     "scripts": {
         "build": "vite build",
-        "prepare": "vite build"
+        "prepare": "vite build",
+        "format": "prettier --write ."
     },
     "devDependencies": {
+        "prettier": "^2.7.1",
         "vite": "^3.0.9"
     }
 }
