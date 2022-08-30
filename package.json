@@ -16,6 +16,9 @@
             "require": "./build/main.umd.cjs"
         }
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "build": "vite build",
         "prepare": "vite build",
