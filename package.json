@@ -1,6 +1,6 @@
 {
     "name": "@xola/xolabot-sdk",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "description": "XolaBot SDK",
     "author": "Nemanja K. <nemanja.k@xola.com>",
     "license": "MIT",
