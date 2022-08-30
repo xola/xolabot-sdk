@@ -77,7 +77,7 @@ class Module {
      * @param {Number} milliseconds
      */
     sleep(milliseconds) {
-        return new Promise(resolve => setTimeout(resolve, milliseconds));
+        return new Promise((resolve) => setTimeout(resolve, milliseconds));
     }
 
     /**
@@ -93,8 +93,6 @@ class Module {
     }
 }
 
-export default Module;
-
 const { React, Button, Columns, ProductTile, Text } = window[btoa('availableXolabotModulePackages')];
 
-export { React, Button, Columns, ProductTile, Text };
+export { Module, React, Button, Columns, ProductTile, Text };

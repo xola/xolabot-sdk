@@ -1,15 +1,26 @@
 {
-    "name": "xolabot-sdk",
+    "name": "@xola/xolabot-sdk",
     "version": "1.1.0",
     "description": "XolaBot SDK",
-    "main": "build/main.js",
     "author": "Nemanja K. <nemanja.k@xola.com>",
     "license": "MIT",
+    "type": "module",
+    "files": [
+        "build"
+    ],
+    "main": "./build/main.umd.cjs",
+    "module": "./build/main.js",
+    "exports": {
+        ".": {
+            "import": "./build/main.js",
+            "require": "./build/main.umd.cjs"
+        }
+    },
     "scripts": {
-        "build": "xolabot-scripts build",
-        "prepare": "xolabot-scripts build"
+        "build": "vite build",
+        "prepare": "vite build"
     },
     "devDependencies": {
-        "xolabot-scripts": "^1.0.1"
+        "vite": "^3.0.9"
     }
 }
